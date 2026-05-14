@@ -1,35 +1,137 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: Arial, sans-serif;
   background: #f4f4f4;
-  display: flex;
-  justify-content: center;
-  padding-top: 50px;
+  margin: 0;
+  padding: 30px;
 }
 
 .container {
   background: white;
+  max-width: 1100px;
+  margin: 0 auto;
   padding: 30px;
-  border-radius: 10px;
-  width: 350px;
+  border-radius: 12px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  margin-top: 15px;
+  font-weight: bold;
 }
 
 input {
   width: 100%;
-  margin-bottom: 15px;
-  padding: 10px;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
 }
 
 button {
   width: 100%;
-  padding: 12px;
+  margin-top: 20px;
+  padding: 14px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
   cursor: pointer;
+  background: #222;
+  color: white;
 }
 
-h1 {
-  font-size: 24px;
+button:hover {
+  background: #444;
 }
 
 h2 {
-  margin-top: 20px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.error {
+  color: red;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  margin-top: 30px;
+}
+
+table {
+  width: 100%;
+  min-width: 850px;
+  border-collapse: collapse;
+  background: white;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+th {
+  background: #f0f0f0;
+}
+
+tr:nth-child(even) {
+  background: #fafafa;
+}
+
+.total-column {
+  font-weight: bold;
+}
+
+.profit {
+  color: green;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+
+  body {
+    padding: 15px;
+  }
+
+  .container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  table {
+    font-size: 14px;
+  }
+}
+
+.chart-container {
+  margin-top: 40px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+canvas {
+  max-height: 450px;
 }
